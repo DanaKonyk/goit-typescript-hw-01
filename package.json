@@ -1,16 +1,27 @@
 {
-  "name": "goit-typescript-hw-01",
+  "name": "ts-course-node",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "web-dev-server --node-resolve --open --watch"
+    "start": "node -r tsconfig-paths/register ./dist/main.js",
+    "dev": "nodemon",
+    "build": "tsc -p tsconfig.json"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "reflect-metadata": "^0.1.13",
+    "routing-controllers": "^0.10.4"
+  },
   "devDependencies": {
-    "@web/dev-server": "^0.4.1"
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.2.5",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.1.3"
   }
 }
